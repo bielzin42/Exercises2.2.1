@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // codigo sem uso de função
+        // var lado1 = 5, lado2 = 3, lado3 = 1, s1 = ((lado1 + lado2 + lado3)/3)
+        
+        // var lado4 = 3; lado5 = 10, lado6 = 7, s2 = ((lado4 + lado5 + lado6)/3)
+
+        // var lado7 = 3; lado8 = 10, lado9 = 7, s3 = ((lado7 + lado8 + lado9)/3)
+        
+        
+        // document.write(`${s1} ${s2} ${s3}`);
+
+
+
+        function ft_calcArea(lado1,lado2,lado3)
+        {   
+            lado1 = parseInt(prompt("Digite um numero"));
+            lado2 = parseInt(prompt("Digite um numero"));
+            lado3 = parseInt(prompt("Digite um numero"));
+
+            var media = ((lado1+lado2+lado3)/3)
+            // console.log(media);
+
+            return media
+        }
+
+        // ft_calcArea()
+        
+      alert(ft_calcArea())
+    
+    </script>
+
+</body>
+</html>

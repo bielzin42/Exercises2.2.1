@@ -11,15 +11,17 @@
 
     var string = prompt("Digite uma frase: ");
     var stringSplited = string.split("");
-    // var vowals = ['a', 'e', 'i', 'o', 'u'];
-    var a = "a", e = "e", i = "i", o = "o", u = "u"; 
-    count = 0;
-
+    var vowals = ['a', 'e', 'i', 'o', 'u'];    
+    var count = 0;
+// indexof
 for(i = 0; i < stringSplited.length; i++)
 {
-    if(stringSplited[i].length == a || stringSplited[i].length == e || stringSplited[i].length == i || stringSplited[i].length == o || stringSplited[i].length == u )
+    for(let a = 0; a < vowals.length; a++)
     {
+        if(stringSplited[i] == vowals[a] )
+        {
         count = count +1;
+        }
     }
 }
     alert(count);

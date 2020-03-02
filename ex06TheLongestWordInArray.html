@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ex 06</title>
 </head>
 <body>
+
+    <script>
+
+      var word = prompt("Digite Frases: ");
+
+      var vetor = word.split(" ");
+
+      var resposta = "";
+
+      for(i = 0; i < vetor.length; i++)
+      {
+          if(vetor[i].length > resposta.length)
+          {
+             resposta = vetor[i];
+          }
+          
+      }
+      alert(resposta);
+ 
+
+    </script>
     
-<script>
-
-   var string = prompt("digite frases: ");
-
-   var stringSplited = string.split(" ");
-
-   var answer = stringSplited.sort(a,b)
-
-
-
-</script>
-
 </body>
 </html>
