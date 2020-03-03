@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista não ordenada</title>
+
+</head>
+<body>
+    <ol id="grupo">
+
+    </ol>
+    <br>
+    <button autofocus id="adicionar" onclick="adicionar()" title="Clique para adicionar um item">Adicionar</button>
+    <button id="remover" onclick="removerItem()" onkeyenter="adicionar()" title="Clique para remover todos os itens">Remover Ultimo item</button>
+    <br>
+    <button id="removerTudo" onclick="removerTudo()">Remover tudo</button>
+
+<script>
+    itens = 1
+    
+    function adicionar()
+    {
+        var ul = document.getElementById("grupo"); // id de onde será criado o filho
+        var li = document.createElement("li"); //criação do novo elemento        
+        li.className = "item"; // criado o classname   
+        li.appendChild(document.createTextNode(prompt("Insira o nome do item "))); //
+        ul.appendChild(li);
+        itens++ 
+    }
+
+    function removerItem () 
+    {
+        var ul = document.getElementById("grupo");       
+        var li =  getElementByClassName("item");
+        ul.removeChild(ul[itens])
+        itens--
+    }
+
+    function removerTudo () 
+    {
+        var ul = document.getElementById("grupo")// pego o id do elemento que eu quero anexar um filho        
+        ul.innerHTML="Lista removida";
+        ul.length = 0;
+        
+    }
+
+
+</script>
+
+
+</body>
+</html>
