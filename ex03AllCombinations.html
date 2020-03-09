@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ex 03</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-
     <script>
-
-
-        var palavras = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
-        
-        
-        
-
-        for(var i = 0; i < palavras.length; i++)
-        {
-            document.write(palavras[i])
-
-            for(var a = 0; a < 1; a++)
-            {
-                document.write(palavras[a]+ ",")               
+        var palavra = prompt("insira uma palavra")
+        var resposta = ""
+        for(var i = 0;i <= palavra.length-1;i++){
+            for(var j = i+1; j <= palavra.length;j++){             
+                resposta += palavra.substring(i,j) + ","
+                
             }
-                        
         }
-
-
-        // incompleto
-
+        resposta = resposta.split("")
+        virgula = resposta.pop()
+        resposta = resposta.join("")
+        console.log(resposta)
     </script>
-    
 </body>
 </html>
